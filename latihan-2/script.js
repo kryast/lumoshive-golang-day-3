@@ -4,9 +4,9 @@ let text = document.createElement("li");
 let hapus = document.createElement("button");
 
 let input = document.getElementById("input").value;
+
 text.innerHTML = input;
 
-hapus.id = "dihapus";
 hapus.innerHTML = "X";
 
 list.appendChild(text);
