@@ -1,26 +1,19 @@
-document.getElementById("input-data").addEventListener("click", function(){
-    document.getElementById("list").style.display = "none";
-    document.getElementById("input").style.display = "block";
-    
+document.getElementById("tombol").addEventListener("click", function(){
+let list = document.getElementById("list");
+let text = document.createElement("li");
+let hapus = document.createElement("button");
+
+let input = document.getElementById("input").value;
+
+text.innerHTML = input;
+
+hapus.innerHTML = "X";
+
+list.appendChild(text);
+text.appendChild(hapus);
+
+hapus.addEventListener("click", function(){
+    list.removeChild(text);
 
 });
-
-document.getElementById("list-data").addEventListener("click", function(){
-    document.getElementById("input").style.display = "none";
-    document.getElementById("list").style.display = "block";
-});
-
-
-let array = [];
-document.getElementById("save").addEventListener("click", function(){
-    let text = document.createElement("p");
-    let nama = document.getElementById("nama").value;
-    let list = document.getElementById("list");
-
-    text.innerHTML = nama;
-    array.push(text);
-    alert ("Data Berhasil Disimpan");
-
-    list.appendChild(array[array.length -1]) ;
-
 });
